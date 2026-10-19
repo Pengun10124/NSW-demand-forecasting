@@ -1,0 +1,22 @@
+{
+  "id": "our_2025_2026",
+  "label": "Our main data",
+  "file": "NSW1_Minimum_Load_Inputs.xlsx",
+  "sheet": "ML Training Data",
+  "cutoff": "2026-04-01",
+  "end": "2026-07-01",
+  "wind": "Wind_NSW_Mean_mps",
+  "rows": 26208,
+  "first_interval": "2025-01-01 00:00:00",
+  "last_interval": "2026-06-30 23:30:00",
+  "train_days": 448,
+  "holdout_days": 91,
+  "missing_temperature_half_hours": 304,
+  "missing_wind_half_hours": 0,
+  "thresholds_mw": {
+    "day_min": 4075.5898331,
+    "mid_min": 4075.5898331
+  },
+  "seconds": 37.1,
+  "source_sha256": "6be8785f44f2b8c9c83731f987ccdefbfabc33eff35af2f2b3b47e38e6748f23"
+}

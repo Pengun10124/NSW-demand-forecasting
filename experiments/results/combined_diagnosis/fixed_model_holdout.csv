@@ -1,0 +1,5 @@
+history,model,MAE,bias
+Original history,Ridge,316.3121716709227,-90.55892124308568
+Original history,Combined-selected GB,368.3064352025607,-139.79713523787527
+Combined history,Ridge,301.0351976574542,20.602861894800213
+Combined history,Combined-selected GB,344.4526227557549,-79.70466692327498

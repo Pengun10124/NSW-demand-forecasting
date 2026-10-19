@@ -1,0 +1,17 @@
+Target,Model,Season,Days,MAE (MW),Bias (MW)
+Daily minimum (any time),Linear Regression (Ridge),Spring,130,504.9671047991294,24.569902535348774
+Daily minimum (any time),Linear Regression (Ridge),Summer,180,474.93627980099376,7.332694623752488
+Daily minimum (any time),Linear Regression (Ridge),Autumn,123,335.33698606227165,2.965761903227133
+Daily minimum (any time),Linear Regression (Ridge),Winter,92,435.20540625219115,-60.67455516943214
+Daily minimum (any time),Baseline: seasonal average,Spring,130,732.1944498689386,210.32837567754993
+Daily minimum (any time),Baseline: seasonal average,Summer,180,822.0066267070084,-79.75146906258576
+Daily minimum (any time),Baseline: seasonal average,Autumn,123,669.5572353279911,-171.22774703126575
+Daily minimum (any time),Baseline: seasonal average,Winter,92,911.7550976652063,-641.651792149135
+Midday minimum (10:00-15:00),Linear Regression (Ridge),Spring,130,625.616449665103,10.529034727749968
+Midday minimum (10:00-15:00),Linear Regression (Ridge),Summer,180,591.3314808198371,11.276575535828755
+Midday minimum (10:00-15:00),Linear Regression (Ridge),Autumn,123,529.3178923268837,61.40263010485153
+Midday minimum (10:00-15:00),Linear Regression (Ridge),Winter,92,618.3015141869669,-76.24890192358595
+Midday minimum (10:00-15:00),Baseline: seasonal average,Spring,130,908.8636192716034,221.29898042645556
+Midday minimum (10:00-15:00),Baseline: seasonal average,Summer,180,994.7149465808923,-90.04537725748219
+Midday minimum (10:00-15:00),Baseline: seasonal average,Autumn,123,864.8699471569065,-202.9248635112989
+Midday minimum (10:00-15:00),Baseline: seasonal average,Winter,92,1089.9727944811807,-719.585251312443

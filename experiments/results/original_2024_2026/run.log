@@ -1,0 +1,67 @@
+pandas 2.2.3 | scikit-learn 1.6.1
+Loaded NSW_ML_Training_Data_2024_2026.xlsx, ML Training Data: 35040 rows
+PASS  No duplicate timestamps
+PASS  Every interval is 30 minutes
+PASS  Every day has 48 half-hours
+PASS  No missing demand values
+
+Missing weather values (handled later, inside the model pipeline):
+Sydney_Airport_Temp_C           41
+Wind_Southern_Tablelands_mps    43
+Wind_New_England_mps            61
+Wind_Central_West_mps           51
+Wind_NSW_Weighted_mps           95
+730 days | the daily minimum fell in the 10:00-15:00 window on 65% of days
+Lowest 8 days in the dataset:
+            day_min  min_hour  Temp_mean  Is_Weekend  Is_Holiday
+Date                                                            
+2025-02-16   2581.8      12.0       19.1           1           0
+2025-12-29   2797.1      12.5       19.3           0           0
+2025-12-27   2973.2      12.5       18.1           1           0
+2025-10-05   2979.4      11.5       21.8           1           0
+2024-10-26   3078.6      12.5       16.0           1           0
+2025-12-28   3088.2      13.5       19.0           1           0
+2025-09-21   3146.1      11.5       16.9           1           0
+2025-10-19   3192.9      12.0       21.1           1           0
+26 features | 723 usable days (first week removed)
+Training: 632 days (08 Jul 2024 to 31 Mar 2026)
+Hold-out: 91 days (01 Apr 2026 to 30 Jun 2026)
+
+Daily minimum (any time): risky if below 4,050 MW | risky days: 64 in training, 3 in hold-out
+Midday minimum (10:00-15:00): risky if below 4,050 MW | risky days: 64 in training, 3 in hold-out
+
+The two targets flag exactly the same risky days: True
+Fold 1: train 08 Jul 2024 to 22 Oct 2024 (107 days) -> validate 23 Oct 2024 to 04 Feb 2025
+Fold 2: train 08 Jul 2024 to 04 Feb 2025 (212 days) -> validate 05 Feb 2025 to 20 May 2025
+Fold 3: train 08 Jul 2024 to 20 May 2025 (317 days) -> validate 21 May 2025 to 02 Sep 2025
+Fold 4: train 08 Jul 2024 to 02 Sep 2025 (422 days) -> validate 03 Sep 2025 to 16 Dec 2025
+Fold 5: train 08 Jul 2024 to 16 Dec 2025 (527 days) -> validate 17 Dec 2025 to 31 Mar 2026
+Daily minimum (any time): best settings {'learning_rate': 0.03, 'max_iter': 200, 'max_leaf_nodes': 7, 'min_samples_leaf': 20}
+Midday minimum (10:00-15:00): best settings {'learning_rate': 0.03, 'max_iter': 200, 'max_leaf_nodes': 15, 'min_samples_leaf': 20}
+Best model for Daily minimum (any time): Linear Regression (Ridge)
+Best model for Midday minimum (10:00-15:00): Linear Regression (Ridge)
+Best flagging approach for Daily minimum (any time): Logistic Regression (recall 0.84, precision 0.42)
+Best flagging approach for Midday minimum (10:00-15:00): Logistic Regression (recall 0.84, precision 0.42)
+Daily minimum (any time): seasonal features account for 8% of total importance
+Midday minimum (10:00-15:00): seasonal features account for 6% of total importance
+======================================================================
+RESULTS SUMMARY
+======================================================================
+Daily minimum fell between 10:00 and 15:00 on 65% of days
+Training: 632 days | Hold-out: 91 days (2026-04-01 to 2026-06-30)
+
+Daily minimum (any time)
+  Regression: Linear Regression (Ridge)
+    CV MAE 443 MW vs seasonal-average baseline 780 MW (43% better)
+    Hold-out MAE 316 MW, MAPE 5.6% (28% better than best baseline)
+  Risk flag (below 4,050 MW): Logistic Regression
+    CV: caught 42 of 50 risky days (recall 84%), 57 false alarms (precision 42%)
+
+Midday minimum (10:00-15:00)
+  Regression: Linear Regression (Ridge)
+    CV MAE 590 MW vs seasonal-average baseline 960 MW (39% better)
+    Hold-out MAE 457 MW, MAPE 7.4% (34% better than best baseline)
+  Risk flag (below 4,050 MW): Logistic Regression
+    CV: caught 42 of 50 risky days (recall 84%), 57 false alarms (precision 42%)
+
+Figures and tables saved in '/Users/maomengmeng/Desktop/codebase/NSW-demand-forecasting/experiments/results/original_2024_2026/': ['01_seasonality.png', '02_model_comparison.png', '03_error_by_month.png', '04_risk_flags_cv.png', '05_holdout_actual_vs_predicted.png', '06_holdout_confusion_matrices.png', '07_feature_importance.png', 'cv_classification_results.csv', 'cv_regression_results.csv', 'holdout_classification_results.csv', 'holdout_regression_results.csv', 'run.log', 'seasonal_performance.csv']

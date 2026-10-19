@@ -1,0 +1,56 @@
+[
+  {
+    "period": "基准年_2023",
+    "start_aest": "2023-01-01",
+    "end_exclusive_aest": "2024-01-01",
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=YSSY&station=YWLM&station=YSDU&station=YSWG&station=YSCB&network=AU__ASOS&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=skyc1&data=skyc2&data=skyc3&data=skyc4&data=wxcodes&data=metar&year1=2023&month1=01&day1=01&year2=2024&month2=01&day2=01&tz=Etc%2FGMT-10&format=onlycomma&latlon=yes&elev=yes&missing=M&report_type=3&report_type=4&direct=no",
+    "file": "基准年_2023/IEM_四站原始观测_AEST.csv",
+    "bytes": 11665911,
+    "sha256": "37fb60ebdb698dec68e21a8432611f67783af3aedbbe5d1da1d085a3e5e200df",
+    "rows": 76335,
+    "counts": {
+      "YSSY": 18257,
+      "YWLM": 18497,
+      "YSDU": 18751,
+      "YSWG": 0,
+      "YSCB": 20830
+    },
+    "status": "downloaded"
+  },
+  {
+    "period": "基准年_2025",
+    "start_aest": "2025-01-01",
+    "end_exclusive_aest": "2026-01-01",
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=YSSY&station=YWLM&station=YSDU&station=YSWG&station=YSCB&network=AU__ASOS&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=skyc1&data=skyc2&data=skyc3&data=skyc4&data=wxcodes&data=metar&year1=2025&month1=01&day1=01&year2=2026&month2=01&day2=01&tz=Etc%2FGMT-10&format=onlycomma&latlon=yes&elev=yes&missing=M&report_type=3&report_type=4&direct=no",
+    "file": "基准年_2025/IEM_四站原始观测_AEST.csv",
+    "bytes": 11369863,
+    "sha256": "2782b58df95d554a91f4f00869a56d1ba5fa1f59bb02603132856d9f5b13092c",
+    "rows": 78550,
+    "counts": {
+      "YSSY": 19619,
+      "YWLM": 19920,
+      "YSDU": 18877,
+      "YSWG": 0,
+      "YSCB": 20134
+    },
+    "status": "downloaded"
+  },
+  {
+    "period": "去年_20250901_20260831",
+    "start_aest": "2025-09-01",
+    "end_exclusive_aest": "2026-09-01",
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=YSSY&station=YWLM&station=YSDU&station=YSWG&station=YSCB&network=AU__ASOS&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=skyc1&data=skyc2&data=skyc3&data=skyc4&data=wxcodes&data=metar&year1=2025&month1=09&day1=01&year2=2026&month2=09&day2=01&tz=Etc%2FGMT-10&format=onlycomma&latlon=yes&elev=yes&missing=M&report_type=3&report_type=4&direct=no",
+    "file": "去年_20250901_20260831/IEM_四站原始观测_AEST.csv",
+    "bytes": 11249638,
+    "sha256": "2b86837e05d595ed4d78641a1920cb8b5ac532a0258a70f73c4e0c1aff829e9c",
+    "rows": 78159,
+    "counts": {
+      "YSSY": 19508,
+      "YWLM": 19546,
+      "YSDU": 18852,
+      "YSWG": 0,
+      "YSCB": 20253
+    },
+    "status": "downloaded"
+  }
+]

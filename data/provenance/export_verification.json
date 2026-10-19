@@ -1,0 +1,20 @@
+{
+  "ML Training Data": {
+    "export_matches_csv": true,
+    "datetime_typed": true,
+    "notebook_interval_checks": true,
+    "days_after_lags": 601,
+    "days_with_no_temperature": 0,
+    "days_with_incomplete_temperature": 204,
+    "train_days": 509,
+    "holdout_days": 92
+  },
+  "Baseline 2023": {
+    "export_matches_csv": true,
+    "datetime_typed": true,
+    "notebook_interval_checks": true,
+    "days_after_lags": 358,
+    "days_with_no_temperature": 0,
+    "days_with_incomplete_temperature": 239
+  }
+}

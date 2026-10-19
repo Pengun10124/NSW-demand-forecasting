@@ -1,0 +1,9 @@
+target,month,training_days,observed_PV_added,MAE
+day_min,7,813,False,255.42746256037566
+day_min,8,813,False,608.2002959156156
+mid_min,7,813,False,331.20262813720757
+mid_min,8,813,False,717.9664459592254
+day_min,7,813,True,557.555570187707
+day_min,8,813,True,561.3272338073342
+mid_min,7,813,True,700.0835966267094
+mid_min,8,813,True,768.2900081520509

@@ -1,0 +1,13 @@
+{
+  "training_cutoff_exclusive": "2026-04-01",
+  "training_days": 990,
+  "test_days": 62,
+  "test_rows": 2976,
+  "test_source": "our_main",
+  "old_test_scores_reproduced": true,
+  "old_files_unchanged": 103,
+  "new_model_selection_or_tuning": false,
+  "input_sha256": "48d3811c26d865cd96a41eecd15ab0e45128232ce9f238ca69ec0f1377751629",
+  "notebook_sha256": "813276728207222d524737e65b07076c1f46ddedfaeb528e62c7998bd2c5f1e5",
+  "protocol": "Frozen Ridge alpha=10, original preprocessing; rolling one-day evaluation using observed previous-day demand and observed same-day weather. No July/August targets used for model fitting. July/August earlier days are available as lag inputs for later days."
+}

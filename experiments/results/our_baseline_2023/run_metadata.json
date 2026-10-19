@@ -1,0 +1,22 @@
+{
+  "id": "our_baseline_2023",
+  "label": "Our 2023 baseline",
+  "file": "NSW1_Minimum_Load_Inputs.xlsx",
+  "sheet": "Baseline 2023",
+  "cutoff": "2023-10-01",
+  "end": "2024-01-01",
+  "wind": "Wind_NSW_Mean_mps",
+  "rows": 17520,
+  "first_interval": "2023-01-01 00:00:00",
+  "last_interval": "2023-12-31 23:30:00",
+  "train_days": 266,
+  "holdout_days": 92,
+  "missing_temperature_half_hours": 566,
+  "missing_wind_half_hours": 0,
+  "thresholds_mw": {
+    "day_min": 5101.25,
+    "mid_min": 5101.25
+  },
+  "seconds": 30.5,
+  "source_sha256": "6be8785f44f2b8c9c83731f987ccdefbfabc33eff35af2f2b3b47e38e6748f23"
+}

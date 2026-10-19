@@ -1,0 +1,63 @@
+pandas 2.2.3 | scikit-learn 1.6.1
+Loaded NSW1_Minimum_Load_Inputs.xlsx, Baseline 2023: 17520 rows
+PASS  No duplicate timestamps
+PASS  Every interval is 30 minutes
+PASS  Every day has 48 half-hours
+PASS  No missing demand values
+
+Missing weather values (handled later, inside the model pipeline):
+Sydney_Airport_Temp_C    566
+365 days | the daily minimum fell in the 10:00-15:00 window on 57% of days
+Lowest 8 days in the dataset:
+            day_min  min_hour  Temp_mean  Is_Weekend  Is_Holiday
+Date                                                            
+2023-10-29   3696.9      11.5       19.7           1           0
+2023-10-08   3906.8      13.0       16.6           1           0
+2023-11-19   3960.9      10.5       21.5           1           0
+2023-10-15   3976.1      10.0       19.5           1           0
+2023-04-09   3997.9      12.5       17.3           1           1
+2023-10-22   4005.0      11.0       21.8           1           0
+2023-09-24   4015.1      13.0       16.0           1           0
+2023-11-18   4055.4      12.5       20.3           1           0
+26 features | 358 usable days (first week removed)
+Training: 266 days (08 Jan 2023 to 30 Sep 2023)
+Hold-out: 92 days (01 Oct 2023 to 31 Dec 2023)
+
+Daily minimum (any time): risky if below 5,101 MW | risky days: 27 in training, 39 in hold-out
+Midday minimum (10:00-15:00): risky if below 5,101 MW | risky days: 27 in training, 39 in hold-out
+
+The two targets flag exactly the same risky days: True
+Fold 1: train 08 Jan 2023 to 22 Feb 2023 (46 days) -> validate 23 Feb 2023 to 07 Apr 2023
+Fold 2: train 08 Jan 2023 to 07 Apr 2023 (90 days) -> validate 08 Apr 2023 to 21 May 2023
+Fold 3: train 08 Jan 2023 to 21 May 2023 (134 days) -> validate 22 May 2023 to 04 Jul 2023
+Fold 4: train 08 Jan 2023 to 04 Jul 2023 (178 days) -> validate 05 Jul 2023 to 17 Aug 2023
+Fold 5: train 08 Jan 2023 to 17 Aug 2023 (222 days) -> validate 18 Aug 2023 to 30 Sep 2023
+Daily minimum (any time): best settings {'learning_rate': 0.03, 'max_iter': 200, 'max_leaf_nodes': 7, 'min_samples_leaf': 10}
+Midday minimum (10:00-15:00): best settings {'learning_rate': 0.03, 'max_iter': 200, 'max_leaf_nodes': 7, 'min_samples_leaf': 20}
+Best model for Daily minimum (any time): Gradient Boosting (tuned)
+Best model for Midday minimum (10:00-15:00): Gradient Boosting (tuned)
+Best flagging approach for Daily minimum (any time): Logistic Regression (recall 0.58, precision 0.45)
+Best flagging approach for Midday minimum (10:00-15:00): Logistic Regression (recall 0.58, precision 0.45)
+Daily minimum (any time): seasonal features account for 19% of total importance
+Midday minimum (10:00-15:00): seasonal features account for 9% of total importance
+======================================================================
+RESULTS SUMMARY
+======================================================================
+Daily minimum fell between 10:00 and 15:00 on 57% of days
+Training: 266 days | Hold-out: 92 days (2023-10-01 to 2023-12-31)
+
+Daily minimum (any time)
+  Regression: Gradient Boosting (tuned)
+    CV MAE 395 MW vs seasonal-average baseline 511 MW (23% better)
+    Hold-out MAE 433 MW, MAPE 8.5% (24% better than best baseline)
+  Risk flag (below 5,101 MW): Logistic Regression
+    CV: caught 14 of 24 risky days (recall 58%), 17 false alarms (precision 45%)
+
+Midday minimum (10:00-15:00)
+  Regression: Gradient Boosting (tuned)
+    CV MAE 584 MW vs seasonal-average baseline 902 MW (35% better)
+    Hold-out MAE 563 MW, MAPE 10.3% (28% better than best baseline)
+  Risk flag (below 5,101 MW): Logistic Regression
+    CV: caught 14 of 24 risky days (recall 58%), 17 false alarms (precision 45%)
+
+Figures and tables saved in '/Users/maomengmeng/Desktop/codebase/NSW-demand-forecasting/experiments/results/our_baseline_2023/': ['01_seasonality.png', '02_model_comparison.png', '03_error_by_month.png', '04_risk_flags_cv.png', '05_holdout_actual_vs_predicted.png', '06_holdout_confusion_matrices.png', '07_feature_importance.png', 'cv_classification_results.csv', 'cv_regression_results.csv', 'holdout_classification_results.csv', 'holdout_regression_results.csv', 'run.log', 'seasonal_performance.csv']

@@ -1,0 +1,256 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Fixed-date validation comparison</title><style>body{font:15px/1.6 system-ui;max-width:1300px;margin:40px auto;padding:0 20px}table{border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid #ddd;text-align:left}th{background:#edf3f8}</style><h1>Combined data: fixed validation dates</h1><p>Original rows win all overlaps. Train: 990 days, including 2023. Test: 91 days, April–June 2026. July–August 2026 is excluded. Lag features reset at the January–June 2024 gap. All previous files are preserved and all test demand targets match the original workbook.</p><h2>Fixed validation windows</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fold</th>
+      <th>train_days</th>
+      <th>train_start</th>
+      <th>train_end</th>
+      <th>validation_start</th>
+      <th>validation_end</th>
+      <th>validation_days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>465</td>
+      <td>2023-01-08</td>
+      <td>2024-10-22</td>
+      <td>2024-10-23</td>
+      <td>2025-02-04</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>570</td>
+      <td>2023-01-08</td>
+      <td>2025-02-04</td>
+      <td>2025-02-05</td>
+      <td>2025-05-20</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>675</td>
+      <td>2023-01-08</td>
+      <td>2025-05-20</td>
+      <td>2025-05-21</td>
+      <td>2025-09-02</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>780</td>
+      <td>2023-01-08</td>
+      <td>2025-09-02</td>
+      <td>2025-09-03</td>
+      <td>2025-12-16</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>885</td>
+      <td>2023-01-08</td>
+      <td>2025-12-16</td>
+      <td>2025-12-17</td>
+      <td>2026-03-31</td>
+      <td>105</td>
+    </tr>
+  </tbody>
+</table><h2>Regression model comparison</h2><p>Lower MAE is better. Models are selected by validation MAE only. The gradient boosting grid is retuned using these fixed windows.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Target</th>
+      <th>Model</th>
+      <th>Validation MAE (MW)</th>
+      <th>Test MAE (MW)</th>
+      <th>RMSE (MW)</th>
+      <th>MAPE (%)</th>
+      <th>R2</th>
+      <th>Selected by validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Linear Regression (Ridge)</td>
+      <td>433.269</td>
+      <td>301.035</td>
+      <td>397.965</td>
+      <td>5.522</td>
+      <td>0.787</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Gradient Boosting (tuned)</td>
+      <td>453.182</td>
+      <td>337.847</td>
+      <td>435.103</td>
+      <td>6.183</td>
+      <td>0.745</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Gradient Boosting</td>
+      <td>466.107</td>
+      <td>333.807</td>
+      <td>435.874</td>
+      <td>6.117</td>
+      <td>0.744</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Random Forest</td>
+      <td>479.248</td>
+      <td>349.555</td>
+      <td>446.340</td>
+      <td>6.373</td>
+      <td>0.732</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Baseline: same as yesterday</td>
+      <td>625.765</td>
+      <td>436.533</td>
+      <td>614.010</td>
+      <td>8.017</td>
+      <td>0.492</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Baseline: seasonal average</td>
+      <td>665.665</td>
+      <td>459.282</td>
+      <td>611.213</td>
+      <td>8.631</td>
+      <td>0.497</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Baseline: same day last week</td>
+      <td>866.716</td>
+      <td>577.092</td>
+      <td>739.150</td>
+      <td>10.229</td>
+      <td>0.264</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Linear Regression (Ridge)</td>
+      <td>606.402</td>
+      <td>433.628</td>
+      <td>551.815</td>
+      <td>7.240</td>
+      <td>0.795</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Gradient Boosting (tuned)</td>
+      <td>610.012</td>
+      <td>501.215</td>
+      <td>655.631</td>
+      <td>8.071</td>
+      <td>0.710</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Gradient Boosting</td>
+      <td>626.719</td>
+      <td>465.427</td>
+      <td>603.628</td>
+      <td>7.756</td>
+      <td>0.754</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Random Forest</td>
+      <td>641.481</td>
+      <td>525.063</td>
+      <td>673.447</td>
+      <td>8.617</td>
+      <td>0.694</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Baseline: same as yesterday</td>
+      <td>868.489</td>
+      <td>755.161</td>
+      <td>971.417</td>
+      <td>12.422</td>
+      <td>0.364</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Baseline: seasonal average</td>
+      <td>891.005</td>
+      <td>725.127</td>
+      <td>904.608</td>
+      <td>12.228</td>
+      <td>0.448</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Baseline: same day last week</td>
+      <td>1144.715</td>
+      <td>908.032</td>
+      <td>1087.227</td>
+      <td>14.600</td>
+      <td>0.203</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table><h2>Interpretation and limitations</h2><p>This predicts the daily minimum and the 10:00–15:00 minimum, not the full 48-point daily demand curve. The test period has already been inspected, so this is an exploratory comparison. Observed weather substitutes for forecasts; wind definitions differ between sources. Tuning and reporting use the same validation folds, not nested CV. Classification retains the full-training quantile threshold.</p><h2>Classification</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Target</th>
+      <th>Model</th>
+      <th>Risky days</th>
+      <th>Caught</th>
+      <th>Missed</th>
+      <th>False alarms</th>
+      <th>Recall</th>
+      <th>Precision</th>
+      <th>F1</th>
+      <th>ROC-AUC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>Logistic Regression</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td>0.333</td>
+      <td>0.429</td>
+      <td>0.935</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>Logistic Regression</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td>0.333</td>
+      <td>0.429</td>
+      <td>0.935</td>
+    </tr>
+  </tbody>
+</table></html>

@@ -1,0 +1,63 @@
+{
+  "train_days": 990,
+  "test_days": 91,
+  "test_start": "2026-04-01",
+  "test_end": "2026-06-30",
+  "selected_models": {
+    "Daily minimum (any time)": "Linear Regression (Ridge)",
+    "Midday minimum (10:00-15:00)": "Linear Regression (Ridge)"
+  },
+  "tuned_parameters": {
+    "day_min": {
+      "categorical_features": "from_dtype",
+      "early_stopping": "auto",
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.03,
+      "loss": "squared_error",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 200,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 10,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "mid_min": {
+      "categorical_features": "from_dtype",
+      "early_stopping": "auto",
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.03,
+      "loss": "squared_error",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 200,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 10,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": null,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "all_cells_passed": true,
+  "original_test_targets_verified": true,
+  "old_files_verified_unchanged": 85,
+  "combined_input_sha256": "48d3811c26d865cd96a41eecd15ab0e45128232ce9f238ca69ec0f1377751629",
+  "elapsed_seconds": 55.0
+}

@@ -1,0 +1,3 @@
+Target,Model,Risky days,Caught,Missed,False alarms,Recall,Precision,F1,ROC-AUC
+Daily minimum (any time),Logistic Regression,3,3,0,12,1.0,0.2,0.3333333333333333,0.9659090909090909
+Midday minimum (10:00-15:00),Logistic Regression,3,3,0,12,1.0,0.2,0.3333333333333333,0.9659090909090909
