@@ -1,0 +1,31 @@
+Variant,Target,Fold,MAE_MW
+No PV,Daily minimum (any time),1,469.58061962173844
+No PV,Daily minimum (any time),2,349.60798783733014
+No PV,Daily minimum (any time),3,425.5819737170765
+No PV,Daily minimum (any time),4,512.4828405493084
+No PV,Daily minimum (any time),5,409.0912560526193
+No PV,Midday minimum (10:00-15:00),1,695.0465774350222
+No PV,Midday minimum (10:00-15:00),2,577.516400693688
+No PV,Midday minimum (10:00-15:00),3,638.7838120763281
+No PV,Midday minimum (10:00-15:00),4,598.2420573676472
+No PV,Midday minimum (10:00-15:00),5,522.4224630886893
+Historical PV only,Daily minimum (any time),1,443.5222304765022
+Historical PV only,Daily minimum (any time),2,354.7796373615422
+Historical PV only,Daily minimum (any time),3,427.00601195006976
+Historical PV only,Daily minimum (any time),4,490.5613762027933
+Historical PV only,Daily minimum (any time),5,434.09722538285376
+Historical PV only,Midday minimum (10:00-15:00),1,657.3197878733359
+Historical PV only,Midday minimum (10:00-15:00),2,530.9115456520755
+Historical PV only,Midday minimum (10:00-15:00),3,617.204848356778
+Historical PV only,Midday minimum (10:00-15:00),4,568.1341480729965
+Historical PV only,Midday minimum (10:00-15:00),5,508.5888582712848
+Observed PV plus history,Daily minimum (any time),1,315.4053056601248
+Observed PV plus history,Daily minimum (any time),2,273.07348922514
+Observed PV plus history,Daily minimum (any time),3,325.8382283501799
+Observed PV plus history,Daily minimum (any time),4,237.79437744444016
+Observed PV plus history,Daily minimum (any time),5,372.1471441335636
+Observed PV plus history,Midday minimum (10:00-15:00),1,377.41089719886986
+Observed PV plus history,Midday minimum (10:00-15:00),2,256.48092263925395
+Observed PV plus history,Midday minimum (10:00-15:00),3,397.85332958016306
+Observed PV plus history,Midday minimum (10:00-15:00),4,274.89927936418167
+Observed PV plus history,Midday minimum (10:00-15:00),5,415.32548797120086

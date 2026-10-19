@@ -1,0 +1,268 @@
+[
+  {
+    "month": "2023-01",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-01/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "e5554b56f45adb1bd68e5e7a428e009132fb0c36f3ac317f95b059f96fe511ce",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-02",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-02/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "c507b207fbb8f2e2d19732b38032bc5e83c9234aff0a15ce8bc2e0a92f8ffcbe",
+    "measurement_rows": 1344,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-03",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-03/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "ea015bde2766d54329461d2eeb5d71b0ea09ff8fdda2ca20a72dd2cb2d5c2072",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-04",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-04/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "5380be35557b9b08a5c32fc0191b8a16f5d9efedc0f6f6d5863f67445f38b506",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-05",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-05/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "aa759f24c2edd241ba0a47429bde4ae6a3ddd8785554c521b6e6b1b8b902c1fa",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-06",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-06/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "0999918b81b99e93f9a9947fb3a9b5405b3d63486ff0c676970f17adc11abbc3",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-07",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-07/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "b6af27ae08b8ba7444084ece2ba7033a77bf9c6450fe63c50e9e1446d081fc99",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-08",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-08/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "b2a988341860da91a13ac6fe5dff37fb10d0377f2002028ae6471c15be3ff653",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-09",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-09/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "80c5e095c314ba6065334ebceae3e9ed40e814ab7cd08b37afb43be06c30122b",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-10",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-10/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "4401f2cbd63eb32efad5d34f3397c80d772f6f0121bc85d390b2f526744a164e",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-11",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-11/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "a605c52826a92bd09ac0184f5e386f89684c102b41992ac5d83f2aa411d8d3fc",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2023-12",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-12/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "6246588aae8391ed9a44485a7d00870075305dadd7a6b5e4aabf85c6e9e8416a",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2024-07",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-07/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "a869ba40b3b2cefb951e9acff56862aa20c6a194a570af4833565fd749e02318",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2024-08",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-08/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "86e3a8f627efc7177ccf88b32722e0f34d5238f4b9e53fd6d5ddeffb3cca8317",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2024-09",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-09/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "31caf6bb8970852719a99828d556e5de62848ffd760a3eab82060c23a5cb6857",
+    "measurement_rows": 1438,
+    "missing_power": 1
+  },
+  {
+    "month": "2024-10",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-10/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "db62fb1ad5fedcdd28ac0985849d7538ee095a045df8a8c9611e7ef393acd952",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2024-11",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-11/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "8deef8ee0da616603d089e8c918cd4dcbf1d8c8fcfcd9b3d429ea5a7610f43c4",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2024-12",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2024-12/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "dd1171d1590cad556a083f1067f30b7b291d70f6ce58b619301dea3db269786b",
+    "measurement_rows": 1488,
+    "missing_power": 2
+  },
+  {
+    "month": "2025-01",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-01/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "9f5915a2399dee87fb78e142d7b2b85bdaa87eca675a16822dab608f1c9b7cd8",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-02",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-02/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "b5b72858a6f5ba91935ce564f2525ce5f8c79ab999339b07f18d098a422022c7",
+    "measurement_rows": 1344,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-03",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-03/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "bd2ec85c2bba7b2a182125974cd4129a36b75e5bffa4b86fc629897ce52258ba",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-04",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-04/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "6a499e9c04ed6701e387a355cfcbc0bb171f151a943f00db30470086743a4feb",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-05",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-05/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "9bdf8f0706ff177a35c748918f9c9ced3901c3d93805e00146af1f1a852ce735",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-06",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-06/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "80e49c673b2ee76adc51243b0c8cd7c66bcb95824494e573f1312f527bfe8dd1",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-07",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-07/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "06887a7bbb138518c07b4175d21c56101ab0bf9dab210cce3755fad783f6e02c",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-08",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-08/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "ff1476d6f742b3a951843740a9e0220a58c5aa2789de163b9099db5fccb91384",
+    "measurement_rows": 1488,
+    "missing_power": 1
+  },
+  {
+    "month": "2025-09",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-09/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "1cfbec8413f33070ff41d85b05b7b6c16a937e5334c2d80a45cc999b333df5fd",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-10",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-10/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "a220a572230d64a311dcce267eeebfe128703ce2d6b1a03aa1052ae48282106b",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-11",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-11/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "b10fd187f6b075b9cb384f9bb06a9783f43779ca141a0b21be54508bda18e4e8",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2025-12",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-12/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "43f16225cd333627e7f6c2c89c700da10efe7555e9f162348dc71c41dfd6f62e",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-01",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-01/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "1a9475acf3ec7c6634655cdecbe8840211403d0f4e70d03bf3a8c346c5acae8e",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-02",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-02/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "667cbc1f9b021a9b6495429c2f81c26cd941d49f9d9f79c1e5e849e3d4d3c6cf",
+    "measurement_rows": 1344,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-03",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-03/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "e53b4de1734ee2e34cbd75b0ddefbc8c0e1eec058ae6494bd5391a367efdef6f",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-04",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-04/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "d0b3a1e2ffe56a10c8b62b15dc9bcce33adb0ea160475a32a07fc1ea53927f6b",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-05",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-05/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "ffea29019fc266b51a14ac169c77fde3020b2b6ce8fe44eedf18e4aa1ba1ddcd",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-06",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-06/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "2b9bee47f3d0a4f805b2c03c56fd3577be040dcbf2eab64132ec94f91bdcb267",
+    "measurement_rows": 1440,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-07",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-07/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "bd070b0ba59404e48ccc6165ae5660d126f21edfba8fa5e1734d91e5028c70b3",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  },
+  {
+    "month": "2026-08",
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-08/NSW1/ROOFTOP_PV_ACTUAL_FILE01.csv",
+    "sha256": "0db2a7aa1640ae79bfad91cef54aec5e7cea3305429520f0a9d81b71adb15ae0",
+    "measurement_rows": 1488,
+    "missing_power": 0
+  }
+]

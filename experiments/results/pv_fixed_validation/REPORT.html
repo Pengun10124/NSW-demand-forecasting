@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Rooftop PV experiment</title><style>body{font:15px/1.6 system-ui;max-width:1250px;margin:40px auto;padding:0 20px}td,th{padding:8px;border-bottom:1px solid #ddd}table{border-collapse:collapse}img{max-width:100%}</style><h1>Rooftop PV: fixed-validation Ridge experiment</h1><p>All variants use the same 990 training days before April 2026, same five validation windows and same Ridge alpha=10. No test-driven tuning. Original code, data and results are preserved on codex/current-results-snapshot. Main matches origin/main. This experiment belongs to codex/pv-model-experiment.</p><p><b>Observed PV is an explanatory scenario, not an operational forecast:</b> actual same-day PV is unknown in advance. Historical PV uses only lag-1 and lag-7 measurements. All variants still use observed weather as in the original experiment. Previously inspected test periods are exploratory.</p><h2>Results (MAE in MW; lower is better)</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variant</th>
+      <th>No PV</th>
+      <th>Historical PV only</th>
+      <th>Observed PV plus history</th>
+    </tr>
+    <tr>
+      <th>Target</th>
+      <th>Period</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Daily minimum (any time)</th>
+      <th>Fixed-date CV</th>
+      <td>433.27</td>
+      <td>429.99</td>
+      <td>304.85</td>
+    </tr>
+    <tr>
+      <th>April-June</th>
+      <td>301.04</td>
+      <td>314.91</td>
+      <td>321.07</td>
+    </tr>
+    <tr>
+      <th>July</th>
+      <td>264.21</td>
+      <td>308.20</td>
+      <td>448.78</td>
+    </tr>
+    <tr>
+      <th>August</th>
+      <td>602.46</td>
+      <td>614.19</td>
+      <td>480.63</td>
+    </tr>
+    <tr>
+      <th>July-August</th>
+      <td>433.34</td>
+      <td>461.20</td>
+      <td>464.70</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">Midday minimum (10:00-15:00)</th>
+      <th>Fixed-date CV</th>
+      <td>606.40</td>
+      <td>576.43</td>
+      <td>344.39</td>
+    </tr>
+    <tr>
+      <th>April-June</th>
+      <td>433.63</td>
+      <td>485.08</td>
+      <td>450.31</td>
+    </tr>
+    <tr>
+      <th>July</th>
+      <td>317.28</td>
+      <td>349.58</td>
+      <td>605.27</td>
+    </tr>
+    <tr>
+      <th>August</th>
+      <td>710.78</td>
+      <td>736.20</td>
+      <td>676.86</td>
+    </tr>
+    <tr>
+      <th>July-August</th>
+      <td>514.03</td>
+      <td>542.89</td>
+      <td>641.06</td>
+    </tr>
+  </tbody>
+</table><h2>Interpretation</h2><p>Observed PV lowers August errors, but July deteriorates and July-August aggregate errors increase. Historical-only PV also fails to improve these tests. Retain this as a comparison experiment, not a demonstrated overall improvement.</p><h2>Predictions</h2><img src="predictions.png"><h2>Data handling</h2><p>Join AEMO NSW1 MEASUREMENT rooftop PV POWER to interval start by subtracting 30 minutes from INTERVAL_DATETIME. Keep only the owning source month because some archives contain extra next-month days. Do not combine MEASUREMENT and SATELLITE values. Missing source records/power remain blank, no interpolation or outlier removal. Incomplete daily summaries remain blank and are handled by fold-fitted median imputation. Lags reset across the 2024 gap. Non-PV input columns are unchanged.</p><p>Rows: 55,536; missing PV rows: 6; incomplete PV days: 3. Source hashes, quality indicators and month ownership are retained under data/pv.</p><h2>Features</h2><p>Historical: daily mean, daily maximum and midday mean, each lagged one and seven days. Observed scenario additionally includes current daily mean, maximum, midday mean and the change in midday mean since yesterday. Features were specified before running this comparison.</p></html>

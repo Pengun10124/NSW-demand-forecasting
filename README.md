@@ -35,3 +35,14 @@ The added interactive notebook retains its June–August 2026 split; the compara
 ## Combined dataset trial
 
 Run `python experiments/run_combined.py` to merge both workbooks and test the combined inputs. Overlapping timestamps retain the complete original row, including missing values. The merged CSV is `data/combined/NSW1_Combined_Original_Priority.csv`; row provenance and merge rules are beside it. January-June 2024 remains absent; lag features reset per continuous segment. The April-June 2026 hold-out is unchanged, and July-August 2026 is excluded from this test. Results are in `experiments/results/combined_original_priority/COMPARISON.html`. Existing inputs and notebooks are preserved.
+
+
+## Preserved branches and rooftop PV experiment
+
+- `main`: identical to the fetched teammate `origin/main`, commit `7be74df8f60d3e10c1c2a471bb8e7a9097a08849`.
+- `codex/current-results-snapshot`: all pre-PV code, data and experiment results, including previously ignored results.
+- `codex/pv-model-experiment`: adds the rooftop PV dataset and fixed-date Ridge comparison.
+
+Open `notebooks/NSW_Rooftop_PV_Fixed_Validation.ipynb` or run `python experiments/run_pv_experiment.py` from the repository root. Results: `experiments/results/pv_fixed_validation/REPORT.html`. The joined dataset is self-contained; source archives are required only to rebuild it from scratch. Observed same-day PV is an explanatory scenario, not an available operational forecast. Historical-only PV is reported separately. Existing model and source columns are unchanged.
+
+The PV experiment improves August under observed-PV assumptions, but does not improve July-August overall. Keep all versions for comparison. Branches and commits are local; nothing has been pushed.
