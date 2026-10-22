@@ -1,0 +1,39 @@
+{
+  "training_days": 951,
+  "source_rows": {
+    "Original workbook": 35040,
+    "Own reprocessed": 20016
+  },
+  "training_cutoff": "2026-03-31",
+  "features": [
+    "DOY_sin1",
+    "DOY_cos1",
+    "DOY_sin2",
+    "DOY_cos2",
+    "Day_Length_h",
+    "Month",
+    "DayOfWeek",
+    "Is_Weekend",
+    "Is_Holiday",
+    "Prev_Holiday",
+    "Next_Holiday",
+    "Xmas_Break",
+    "Temp_mean",
+    "Temp_max",
+    "Temp_min",
+    "Temp_midday",
+    "HDD",
+    "CDD",
+    "Wind_mean",
+    "day_min_lag1",
+    "day_min_lag7",
+    "day_min_roll7",
+    "mid_min_lag1",
+    "mid_min_lag7",
+    "mid_min_roll7",
+    "day_mean_lag1"
+  ],
+  "model": "HistGradientBoostingRegressor(max_iter=300, learning_rate=0.05, random_state=42)",
+  "overlap": "Original workbook whole row wins. Own inputs use new 90-minute cleaning. Original workbook values are not reprocessed.",
+  "protocol": "No linear model, no tuning, same-day observed weather, calendar-correct past-demand features. Original weather NaNs handled natively by Gradient Boosting. Standalone reproducible mixed-data experiment; no upload performed by this script."
+}

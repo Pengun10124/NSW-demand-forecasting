@@ -1,0 +1,137 @@
+<html><meta charset="utf-8"><title>Original plus reprocessed own data</title><style>body{font:16px/1.6 system-ui;margin:40px}td,th{padding:9px}</style><h1>Original plus reprocessed own data: Gradient Boosting</h1><p>Original workbook wins overlapping timestamps. New own-source cleaning applies only to supplementary data. Both targets use the existing Gradient Boosting settings and training ends March 31. Observed weather is an idealized input. No linear models, tuning, push or branch changes.</p><p>Training days: 951</p><h2>All available test dates</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Target</th>
+      <th>Period</th>
+      <th>Days</th>
+      <th>MAE_MW</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>April-June</td>
+      <td>91</td>
+      <td>332.913</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>July</td>
+      <td>15</td>
+      <td>266.572</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>August</td>
+      <td>24</td>
+      <td>603.188</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>July-August</td>
+      <td>39</td>
+      <td>473.721</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>April-June</td>
+      <td>91</td>
+      <td>471.812</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>July</td>
+      <td>15</td>
+      <td>357.627</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>August</td>
+      <td>24</td>
+      <td>687.671</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>July-August</td>
+      <td>39</td>
+      <td>560.731</td>
+    </tr>
+  </tbody>
+</table><h2>Same-date comparison, MAE in MW</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Target</th>
+      <th>Period</th>
+      <th>Matched_days</th>
+      <th>Mixed_recleaned_MAE_MW</th>
+      <th>Own_only_MAE_MW</th>
+      <th>Previous_mixed_MAE_MW</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>April-June</td>
+      <td>75</td>
+      <td>315.980</td>
+      <td>327.887</td>
+      <td>321.287</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>July</td>
+      <td>15</td>
+      <td>266.572</td>
+      <td>292.705</td>
+      <td>311.646</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>August</td>
+      <td>24</td>
+      <td>603.188</td>
+      <td>602.246</td>
+      <td>545.441</td>
+    </tr>
+    <tr>
+      <td>Daily minimum (any time)</td>
+      <td>July-August</td>
+      <td>39</td>
+      <td>473.721</td>
+      <td>483.192</td>
+      <td>455.520</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>April-June</td>
+      <td>75</td>
+      <td>436.673</td>
+      <td>447.155</td>
+      <td>435.692</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>July</td>
+      <td>15</td>
+      <td>357.627</td>
+      <td>329.042</td>
+      <td>323.727</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>August</td>
+      <td>24</td>
+      <td>687.671</td>
+      <td>662.861</td>
+      <td>679.849</td>
+    </tr>
+    <tr>
+      <td>Midday minimum (10:00-15:00)</td>
+      <td>July-August</td>
+      <td>39</td>
+      <td>560.731</td>
+      <td>534.469</td>
+      <td>542.879</td>
+    </tr>
+  </tbody>
+</table></html>

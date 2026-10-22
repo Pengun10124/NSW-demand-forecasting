@@ -1,46 +1,36 @@
-# NSW minimum demand: own-source Gradient Boosting
+# NSW minimum demand: mixed-data Gradient Boosting
 
-This local experimental branch now uses only independently collected AEMO demand and IEM weather data. It replaces the prior merged-data workflow. The main branch and PV experiment branch are unchanged. No changes have been pushed.
-
-The two regression targets are the lowest half-hour demand of the day and the lowest half-hour demand between 10:00 and 15:00. Both use the existing scikit-learn Histogram Gradient Boosting model with 300 iterations, learning rate 0.05 and random seed 42. No linear models are trained or selected. No PV features are supplied.
-
-## Data and cleaning
-
-See [the data guide](data/own_reprocessed/README.txt), [exact weather download URLs](data/own_reprocessed/weather_download_sources.json) and [source manifest](data/own_reprocessed/source_manifest.json).
-
-Temperature is Sydney Airport observation. Wind is the equal mean of Sydney Airport, Williamtown, Dubbo and Tamworth, after separately cleaning each station. Missing runs up to 90 minutes use the last real observation. Longer runs remain missing and the affected day is excluded. Demand requires six valid five-minute observations per half-hour and is never filled. Calendar gaps are preserved before deriving lag and rolling features. No median filling is applied.
-
-The 2023, 2025 and September 2025-August 2026 groups contain 973 unique days. Cleaning retains 949 complete days; 811 days have all 26 model inputs, including seven-day history. No 2024 data is supplied by the selected own-source periods. The archived donor workbook and prior merged table are not part of this branch's active data.
+This branch combines the original training workbook with the newly reprocessed supplementary data. Original workbook rows win overlapping timestamps. Both regression targets use **Histogram Gradient Boosting only**, with 300 iterations, learning rate 0.05 and random seed 42. No PV features or linear models are trained in this experiment.
 
 ## Run
 
-Install requirements, then run from the repository root:
+Install requirements and run from the repository root. Choose a fresh output directory to preserve the saved results:
 
 ```bash
-python experiments/run_own_gradient.py
+python experiments/run_mixed_gradient.py --output experiments/results/mixed_repeat
 ```
 
-The default result directory already contains this run. To rerun without overwriting it, choose a new directory:
+The original workbook is in `data/original/`. Supplementary input, source links, original weather downloads and cleaning audits are in `data/own_reprocessed/`. The executable original aggregation/feature steps are preserved in `experiments/original_feature_steps.json`.
 
-```bash
-python experiments/run_own_gradient.py --output experiments/results/own_gradient_repeat
-```
+## Method
 
-Alternatively use [the notebook](notebooks/NSW_Own_Data_Gradient_Boosting.ipynb) from a full checkout. Models use 697 eligible training days before April 2026. Test periods remain April-June (75 eligible days), July (15) and August (24). The original five validation calendar windows are retained but only available dates are evaluated. This is not identical validation coverage to earlier runs.
+Supplementary weather uses the 90-minute maximum forward-fill rule, followed by whole-day exclusion if unresolved required weather remains. Original workbook values retain their original processing. Sydney Airport temperature and four-station mean wind are used for supplementary observations; original weather includes its regional weighted wind. Calendar dates remain explicit for demand lags and rolling features. Training uses 951 eligible days before April 2026. Missing weather in original records is handled natively by Gradient Boosting.
 
-## Results
+Actual same-day weather stands in for forecasts. This is retrospective evaluation, not proof of operational day-ahead accuracy. Test periods were previously inspected, and excluded dates reduce evaluation coverage.
 
-[Full results](experiments/results/own_gradient_90min/REPORT.html), [metrics](experiments/results/own_gradient_90min/metrics.csv), [excluded test dates](experiments/results/own_gradient_90min/excluded_test_dates.csv) and [comparison on identical dates](experiments/results/own_gradient_90min/matched_date_comparison.csv).
+## Results on the same test dates
 
-| Period | Eligible days | Daily-minimum MAE (MW) | Midday-minimum MAE (MW) |
-|---|---:|---:|---:|
-| April-June | 75 | 327.89 | 447.15 |
-| July | 15 | 292.71 | 329.04 |
-| August | 24 | 602.25 | 662.86 |
-| July-August | 39 | 483.19 | 534.47 |
+MAE in MW; lower is better. Comparisons below use identical dates and verified matching demand targets.
 
-Scores cover retained dates only. Use the matched-date comparison rather than comparing to earlier full-month scores. Previously trained Ridge predictions are included as a saved reference only; Ridge is not rerun. Observed same-day weather is an idealized input, not an archived forecast. Earlier observed test days feed later demand lags. Test dates have been inspected before, so this is exploratory evaluation rather than a new blind final test.
+| Period | Days | Mixed: daily min | Own-only: daily min | Mixed: midday min | Own-only: midday min |
+|---|---:|---:|---:|---:|---:|
+| April-June | 75 | 315.98 | 327.89 | 436.67 | 447.15 |
+| July | 15 | 266.57 | 292.71 | 357.63 | 329.04 |
+| August | 24 | 603.19 | 602.25 | 687.67 | 662.86 |
+| July-August | 39 | 473.72 | 483.19 | 560.73 | 534.47 |
 
-## Preservation
+Adding the original data improves July daily-minimum predictions, but August daily error is essentially unchanged and midday error is higher in July and August. There is no across-the-board improvement. Source mix and training coverage change together, so this does not isolate a causal explanation.
 
-Before replacement, the complete former branch was exported to a verified local archive outside the repository. Previous results remain recoverable from that archive and the preceding Git commit. Only this branch is changed; no push is performed.
+[Full report](experiments/results/mixed_recleaned_gradient/REPORT.html) · [Same-date comparison](experiments/results/mixed_recleaned_gradient/matched_comparison.csv) · [All available-date metrics](experiments/results/mixed_recleaned_gradient/metrics.csv).
+
+The preceding own-only experiment remains available in [its documentation](OWN_DATA_EXPERIMENT.md) and `experiments/results/own_gradient_90min/`. Older branch contents remain recoverable in Git history and a verified local archive. Main and the PV branch are unchanged.

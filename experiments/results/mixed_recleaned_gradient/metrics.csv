@@ -1,0 +1,9 @@
+Target,Period,Days,MAE_MW
+Daily minimum (any time),April-June,91,332.9128850783366
+Daily minimum (any time),July,15,266.57248054103854
+Daily minimum (any time),August,24,603.1880410750236
+Daily minimum (any time),July-August,39,473.7205177927218
+Midday minimum (10:00-15:00),April-June,91,471.81246696866015
+Midday minimum (10:00-15:00),July,15,357.62671852706876
+Midday minimum (10:00-15:00),August,24,687.6712833121707
+Midday minimum (10:00-15:00),July-August,39,560.7310660871316
