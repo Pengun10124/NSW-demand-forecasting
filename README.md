@@ -1,37 +1,46 @@
-# NSW demand forecasting: original and additional datasets
+# NSW minimum demand: own-source Gradient Boosting
 
-The upstream notebook and original workbook are preserved. The original notebook was restored byte-for-byte from Git HEAD.
+This local experimental branch now uses only independently collected AEMO demand and IEM weather data. It replaces the prior merged-data workflow. The main branch and PV experiment branch are unchanged. No changes have been pushed.
 
-## Choose a notebook
+The two regression targets are the lowest half-hour demand of the day and the lowest half-hour demand between 10:00 and 15:00. Both use the existing scikit-learn Histogram Gradient Boosting model with 300 iterations, learning rate 0.05 and random seed 42. No linear models are trained or selected. No PV features are supplied.
 
-- `notebooks/NSW_Minimum_Load_Forecasting.ipynb`: original upstream notebook, original GitHub data-loading behaviour and saved outputs.
-- `notebooks/NSW_Minimum_Load_Forecasting_Our_Data.ipynb`: added version using our local workbook, four-station mean wind, and June–August 2026 hold-out. Outputs are cleared so they can be regenerated.
+## Data and cleaning
 
-## Available data
+See [the data guide](data/own_reprocessed/README.txt), [exact weather download URLs](data/own_reprocessed/weather_download_sources.json) and [source manifest](data/own_reprocessed/source_manifest.json).
 
-- `data/NSW_ML_Training_Data_2024_2026.xlsx`: original workbook, unchanged.
-- `data/NSW1_Minimum_Load_Inputs.xlsx`: additional workbook. Main sheet covers January 2025–August 2026; separate Baseline 2023 sheet retains the full year.
-- Our matching CSVs and `data/USER_GUIDE.html` are included; source and quality records are in `data/provenance/`.
+Temperature is Sydney Airport observation. Wind is the equal mean of Sydney Airport, Williamtown, Dubbo and Tamworth, after separately cleaning each station. Missing runs up to 90 minutes use the last real observation. Longer runs remain missing and the affected day is excluded. Demand requires six valid five-minute observations per half-hour and is never filled. Calendar gaps are preserved before deriving lag and rolling features. No median filling is applied.
 
-Do not combine 2023 with the later main sheet using positional lags: 2024 is missing. Our wind is an available-station mean, not the original three-region weighted measure. Weather is observed, used as an idealized forecast input. The risk threshold is statistical, not an official safety threshold.
+The 2023, 2025 and September 2025-August 2026 groups contain 973 unique days. Cleaning retains 949 complete days; 811 days have all 26 model inputs, including seven-day history. No 2024 data is supplied by the selected own-source periods. The archived donor workbook and prior merged table are not part of this branch's active data.
 
-## Run locally
+## Run
 
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-jupyter notebook
+Install requirements, then run from the repository root:
+
+```bash
+python experiments/run_own_gradient.py
 ```
 
-For the added notebook, launch from the repository root or `notebooks/`. For Colab, upload the added notebook and new workbook. Opening the upstream Colab URL still opens the original version.
+The default result directory already contains this run. To rerun without overwriting it, choose a new directory:
 
-## Dataset trials
+```bash
+python experiments/run_own_gradient.py --output experiments/results/own_gradient_repeat
+```
 
-`experiments/compare_datasets.py` runs the original model grids against three datasets with a fixed seed. The original and our main inputs are compared on the same April–June 2026 hold-out; training history differs and is recorded. Baseline 2023 uses October–December 2023 and is a separate period experiment, not a like-for-like ranking. Trial outputs are stored under `experiments/results/`. See its `COMPARISON.html` after execution.
+Alternatively use [the notebook](notebooks/NSW_Own_Data_Gradient_Boosting.ipynb) from a full checkout. Models use 697 eligible training days before April 2026. Test periods remain April-June (75 eligible days), July (15) and August (24). The original five validation calendar windows are retained but only available dates are evaluated. This is not identical validation coverage to earlier runs.
 
-The added interactive notebook retains its June–August 2026 split; the comparative experiment uses April–June for the overlapping 2026 period. Do not confuse the two evaluations.
+## Results
 
-## Combined dataset trial
+[Full results](experiments/results/own_gradient_90min/REPORT.html), [metrics](experiments/results/own_gradient_90min/metrics.csv), [excluded test dates](experiments/results/own_gradient_90min/excluded_test_dates.csv) and [comparison on identical dates](experiments/results/own_gradient_90min/matched_date_comparison.csv).
 
-Run `python experiments/run_combined.py` to merge both workbooks and test the combined inputs. Overlapping timestamps retain the complete original row, including missing values. The merged CSV is `data/combined/NSW1_Combined_Original_Priority.csv`; row provenance and merge rules are beside it. January-June 2024 remains absent; lag features reset per continuous segment. The April-June 2026 hold-out is unchanged, and July-August 2026 is excluded from this test. Results are in `experiments/results/combined_original_priority/COMPARISON.html`. Existing inputs and notebooks are preserved.
+| Period | Eligible days | Daily-minimum MAE (MW) | Midday-minimum MAE (MW) |
+|---|---:|---:|---:|
+| April-June | 75 | 327.89 | 447.15 |
+| July | 15 | 292.71 | 329.04 |
+| August | 24 | 602.25 | 662.86 |
+| July-August | 39 | 483.19 | 534.47 |
+
+Scores cover retained dates only. Use the matched-date comparison rather than comparing to earlier full-month scores. Previously trained Ridge predictions are included as a saved reference only; Ridge is not rerun. Observed same-day weather is an idealized input, not an archived forecast. Earlier observed test days feed later demand lags. Test dates have been inspected before, so this is exploratory evaluation rather than a new blind final test.
+
+## Preservation
+
+Before replacement, the complete former branch was exported to a verified local archive outside the repository. Previous results remain recoverable from that archive and the preceding Git commit. Only this branch is changed; no push is performed.

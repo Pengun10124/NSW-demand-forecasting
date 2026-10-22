@@ -1,0 +1,15 @@
+Reference,Target,Period,Matched_days,Previous_MAE_MW,New_MAE_MW,Improvement_pct
+Previous merged-data Gradient Boosting,Daily minimum (any time),April-June,75,321.2867986534406,327.8871167399064,-2.054338402364703
+Previous merged-data Gradient Boosting,Daily minimum (any time),July,15,311.6456961026728,292.70452301653137,6.077790684425554
+Previous merged-data Gradient Boosting,Daily minimum (any time),August,24,545.4412721521513,602.2462590734032,-10.414501032735572
+Previous merged-data Gradient Boosting,Daily minimum (any time),July-August,39,455.51989674850574,483.1917452053755,-6.0747837041567285
+Previous merged-data Gradient Boosting,Midday minimum (10:00-15:00),April-June,75,435.69177512560884,447.1549648436582,-2.63103192956639
+Previous merged-data Gradient Boosting,Midday minimum (10:00-15:00),July,15,323.72650465009394,329.0424266841014,-1.6421028113695064
+Previous merged-data Gradient Boosting,Midday minimum (10:00-15:00),August,24,679.8494818371679,662.8613082443791,2.4988139355319383
+Previous merged-data Gradient Boosting,Midday minimum (10:00-15:00),July-August,39,542.8791059959857,534.4694307211953,1.5490880348695142
+Previous merged-data Ridge (saved predictions only),Daily minimum (any time),July,15,272.85654635714957,292.70452301653137,-7.274143473692666
+Previous merged-data Ridge (saved predictions only),Daily minimum (any time),August,24,646.5155801063884,602.2462590734032,6.847371106772153
+Previous merged-data Ridge (saved predictions only),Daily minimum (any time),July-August,39,502.8005671259119,483.1917452053755,3.8999204063399424
+Previous merged-data Ridge (saved predictions only),Midday minimum (10:00-15:00),July,15,346.4453603210105,329.0424266841014,5.023283793087569
+Previous merged-data Ridge (saved predictions only),Midday minimum (10:00-15:00),August,24,746.7049741245255,662.8613082443791,11.228486321314382
+Previous merged-data Ridge (saved predictions only),Midday minimum (10:00-15:00),July-August,39,592.7589688154814,534.4694307211953,9.833598673465348

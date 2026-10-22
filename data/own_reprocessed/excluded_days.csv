@@ -1,0 +1,25 @@
+Date,demand_missing_intervals,temperature_missing_intervals,wind_missing_intervals,excluded,reason
+2023-01-06,0,0,4,True,wind incomplete
+2023-01-08,0,0,1,True,wind incomplete
+2023-01-09,0,0,16,True,wind incomplete
+2023-01-15,0,0,9,True,wind incomplete
+2023-05-10,0,4,4,True,temperature incomplete; wind incomplete
+2023-05-18,0,0,8,True,wind incomplete
+2023-05-26,0,0,7,True,wind incomplete
+2025-01-04,0,0,4,True,wind incomplete
+2025-01-05,0,0,1,True,wind incomplete
+2025-01-22,0,0,6,True,wind incomplete
+2025-02-11,0,0,21,True,wind incomplete
+2025-02-12,0,0,11,True,wind incomplete
+2025-03-25,0,8,0,True,temperature incomplete
+2025-03-26,0,0,6,True,wind incomplete
+2025-04-02,0,4,0,True,temperature incomplete
+2025-07-10,0,4,4,True,temperature incomplete; wind incomplete
+2025-09-24,0,0,4,True,wind incomplete
+2025-10-20,0,0,20,True,wind incomplete
+2025-12-03,0,0,4,True,wind incomplete
+2026-04-13,0,0,4,True,wind incomplete
+2026-05-18,0,0,7,True,wind incomplete
+2026-07-08,0,0,7,True,wind incomplete
+2026-07-22,0,0,6,True,wind incomplete
+2026-08-25,0,0,14,True,wind incomplete

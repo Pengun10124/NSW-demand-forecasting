@@ -1,0 +1,7 @@
+{
+  "serialized_models_reproduce_predictions": true,
+  "only_gradient_boosting_fitted": true,
+  "26_non_PV_inputs": true,
+  "matched_date_targets_agree": true,
+  "previous_branch_archive_preserved": true
+}

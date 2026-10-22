@@ -1,0 +1,14 @@
+[
+  {
+    "file": "raw_weather/IEM_2023.csv",
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=YSSY&station=YWLM&station=YSDU&station=YSTW&network=AU__ASOS&data=tmpf&data=sknt&data=metar&year1=2022&month1=12&day1=31&year2=2024&month2=1&day2=2&tz=Etc%2FGMT-10&format=onlycomma&latlon=yes&elev=yes&missing=M&report_type=3&report_type=4&direct=no",
+    "sha256": "308bb9cb1ca73d5f57973ef614f66ddc297994810b23bfe663035c152ba2ca58",
+    "retrieved_utc": "2026-10-22T01:36:41.075251+00:00"
+  },
+  {
+    "file": "raw_weather/IEM_2025_2026.csv",
+    "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=YSSY&station=YWLM&station=YSDU&station=YSTW&network=AU__ASOS&data=tmpf&data=sknt&data=metar&year1=2024&month1=12&day1=31&year2=2026&month2=9&day2=2&tz=Etc%2FGMT-10&format=onlycomma&latlon=yes&elev=yes&missing=M&report_type=3&report_type=4&direct=no",
+    "sha256": "4aaae925607135dc28bff2a4e5164891c1513f25fc28d5665b2c741cf28d699b",
+    "retrieved_utc": "2026-10-22T01:37:09.145649+00:00"
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-01/NSW1/PRICE_AND_DEMAND_202301_NSW1.csv",
+    "sha256": "352682f90a89c9220e17435f060cff68ebeba75c565f0b4365e17c3dd266590e"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-02/NSW1/PRICE_AND_DEMAND_202302_NSW1.csv",
+    "sha256": "1061637963c9c803aefb70b1d92bdd1eaf6c20d1be45e8d046bd497bb9d0356f"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-03/NSW1/PRICE_AND_DEMAND_202303_NSW1.csv",
+    "sha256": "e0ba4451c28236fbef544f133a0424ce440a415bf8342da85f1eaa69859e6363"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-04/NSW1/PRICE_AND_DEMAND_202304_NSW1.csv",
+    "sha256": "b88a9abb9dab57b8c14a3b5ce601e59d53d37160ce966daaa99cdc7e1a3f69a0"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-05/NSW1/PRICE_AND_DEMAND_202305_NSW1.csv",
+    "sha256": "4d4add87e1d07e28ed9b281c66f9e33356c304ee280950b4463208fc7f90d450"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-06/NSW1/PRICE_AND_DEMAND_202306_NSW1.csv",
+    "sha256": "78fb40819ec6ce45a342315a22b7d23b15396204e302fc09734e317e4739dcfc"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-07/NSW1/PRICE_AND_DEMAND_202307_NSW1.csv",
+    "sha256": "3b263f2ef0e04366439d028b9526614aeec2ff5c34323aa0cb8ebeaaa6110665"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-08/NSW1/PRICE_AND_DEMAND_202308_NSW1.csv",
+    "sha256": "e9f79f18fff08200c444be2f35a336dd3dce091c63a63bde57da06d8e45c0f18"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-09/NSW1/PRICE_AND_DEMAND_202309_NSW1.csv",
+    "sha256": "9727ad6634f1bdefa26f254adf71c8a2f2d9fbe96a32a43fc9e9222452a7c170"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-10/NSW1/PRICE_AND_DEMAND_202310_NSW1.csv",
+    "sha256": "e9a201071965867e2d85f241dfe19a7b78fe65549ff29f6a52143d4afd1d9d42"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-11/NSW1/PRICE_AND_DEMAND_202311_NSW1.csv",
+    "sha256": "991dd64960edfeafaf246210cb259e7894ea2a6fc07662bf802a62d38cd8fd66"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2023-12/NSW1/PRICE_AND_DEMAND_202312_NSW1.csv",
+    "sha256": "bf2c620849988a7b5a4b1318a944310540429f033bc3530177b9ef06b7b1846e"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-01/NSW1/PRICE_AND_DEMAND_202501_NSW1.csv",
+    "sha256": "975e8603457f1370f818c880e18a8a7f0c09794410a04d83a0b6f677dca9906a"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-02/NSW1/PRICE_AND_DEMAND_202502_NSW1.csv",
+    "sha256": "2fe774a2dc257900ea734278de663dac63b95e5967a5b5e2384aa4d5df17a146"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-03/NSW1/PRICE_AND_DEMAND_202503_NSW1.csv",
+    "sha256": "bc5589d85400e2ce9dcbf93232ca17676280f3b0d6369a208c37efb923a04986"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-04/NSW1/PRICE_AND_DEMAND_202504_NSW1.csv",
+    "sha256": "164a09c6a1047767f23f15eb2ffdbfca4ada76b4cfef6f69e23a4cc8c9a25949"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-05/NSW1/PRICE_AND_DEMAND_202505_NSW1.csv",
+    "sha256": "76132a704b56a633eccbdd4377998f7e23be636c77290082ad043684e8c4becb"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-06/NSW1/PRICE_AND_DEMAND_202506_NSW1.csv",
+    "sha256": "e84113497898ea664896f3d18f14c1244c9cb66dc939ed36ca8e0e27e0339383"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-07/NSW1/PRICE_AND_DEMAND_202507_NSW1.csv",
+    "sha256": "caeb430a075a74c53ac98b8021756f61fc1dd0c0c20c72cf61b3b7a846649ccc"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-08/NSW1/PRICE_AND_DEMAND_202508_NSW1.csv",
+    "sha256": "7c5309b9cc14c4835f30e694c4599ec16be395e2cc69e1415358e375b2d64051"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-09/NSW1/PRICE_AND_DEMAND_202509_NSW1.csv",
+    "sha256": "2216c9a6d76c16c76d3af1b459cef3b4d1e64a2ff79d8a4caabe156056f318b2"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-10/NSW1/PRICE_AND_DEMAND_202510_NSW1.csv",
+    "sha256": "d0b438c469bff79b8a93d23c0ce87335f2b73159bebf41acfb7e722202e19303"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-11/NSW1/PRICE_AND_DEMAND_202511_NSW1.csv",
+    "sha256": "11ce9a97a9ec6748eabe9fe436e4f90245a3da1fd39fb445261a824bbbf20572"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2025-12/NSW1/PRICE_AND_DEMAND_202512_NSW1.csv",
+    "sha256": "d6c5968d4dda350edccc928c52b2dadc55a1df4aebfeb73cee7fa989a288565b"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-01/NSW1/PRICE_AND_DEMAND_202601_NSW1.csv",
+    "sha256": "e925ec937ca6de5e79887519cfdb226c06917497ce8fd49062a8359b41924094"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-02/NSW1/PRICE_AND_DEMAND_202602_NSW1.csv",
+    "sha256": "5ca85cec2a1fd6543f823268648639a873814b7254b2ecd8e94ce27b6b95dffb"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-03/NSW1/PRICE_AND_DEMAND_202603_NSW1.csv",
+    "sha256": "afd51413c510e8a3a5f4401d6c1fbaa769cfdf8a85bd3f1ab403cd9d3e6f058f"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-04/NSW1/PRICE_AND_DEMAND_202604_NSW1.csv",
+    "sha256": "17a7ebf9c322f2df3e55f6b743bc4829efa30fb891f3dc84a1965f038f9b2f94"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-05/NSW1/PRICE_AND_DEMAND_202605_NSW1.csv",
+    "sha256": "7bb653e074dd7d5f7dd1153d75bb3aa790c6890afc54e0c23773da120b4df0d0"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-06/NSW1/PRICE_AND_DEMAND_202606_NSW1.csv",
+    "sha256": "edcaaccc1871395f860ff4a1e0d6ae4db43302f6749d41a1e46f3ad30fc899e5"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-07/NSW1/PRICE_AND_DEMAND_202607_NSW1.csv",
+    "sha256": "562dfb1d4b89f752f969b106b74a7b876cdd8ed2b670d305145c4aa8e967df30"
+  },
+  {
+    "path": "/Users/maomengmeng/Desktop/database/AEMO/2026-08/NSW1/PRICE_AND_DEMAND_202608_NSW1.csv",
+    "sha256": "3d2dfce2bc6df6e87276075176951ef3e4591b39d9c01f0e27928471a7053f63"
+  },
+  {
+    "path": "/Users/maomengmeng/Documents/ChatGPT/ENGG2122/nsw1-model-data/reprocessed_90min/raw_weather/IEM_2023.csv",
+    "sha256": "308bb9cb1ca73d5f57973ef614f66ddc297994810b23bfe663035c152ba2ca58"
+  },
+  {
+    "path": "/Users/maomengmeng/Documents/ChatGPT/ENGG2122/nsw1-model-data/reprocessed_90min/raw_weather/IEM_2025_2026.csv",
+    "sha256": "4aaae925607135dc28bff2a4e5164891c1513f25fc28d5665b2c741cf28d699b"
+  }
+]

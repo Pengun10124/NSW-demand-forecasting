@@ -1,0 +1,64 @@
+{
+  "model_class": "sklearn.ensemble.HistGradientBoostingRegressor",
+  "sklearn_version": "1.6.1",
+  "parameters": {
+    "max_iter": 300,
+    "learning_rate": 0.05,
+    "random_state": 42
+  },
+  "features": [
+    "DOY_sin1",
+    "DOY_cos1",
+    "DOY_sin2",
+    "DOY_cos2",
+    "Day_Length_h",
+    "Month",
+    "DayOfWeek",
+    "Is_Weekend",
+    "Is_Holiday",
+    "Prev_Holiday",
+    "Next_Holiday",
+    "Xmas_Break",
+    "Temp_mean",
+    "Temp_max",
+    "Temp_min",
+    "Temp_midday",
+    "HDD",
+    "CDD",
+    "Wind_mean",
+    "day_min_lag1",
+    "day_min_lag7",
+    "day_min_roll7",
+    "mid_min_lag1",
+    "mid_min_lag7",
+    "mid_min_roll7",
+    "day_mean_lag1"
+  ],
+  "training_days": 697,
+  "training_cutoff_exclusive": "2026-04-01",
+  "data_sha256": "3138b28d9159760426cfc78f3bedb6b8448036230e7c710398e5d51fb0d86032",
+  "original_fixed_windows": [
+    [
+      "2024-10-23",
+      "2025-02-04"
+    ],
+    [
+      "2025-02-05",
+      "2025-05-20"
+    ],
+    [
+      "2025-05-21",
+      "2025-09-02"
+    ],
+    [
+      "2025-09-03",
+      "2025-12-16"
+    ],
+    [
+      "2025-12-17",
+      "2026-03-31"
+    ]
+  ],
+  "protocol": "Only Gradient Boosting fitted. No Ridge or other linear estimator is imported, fitted or selected. No tuning on test months. Fixed original windows with available own-source days only: counts differ from earlier runs because 2024 and excluded days are absent. Two targets trained separately. Same-day observed weather is an idealized retrospective input; earlier test observations supply later calendar-correct lags. No median imputation; incomplete feature rows are excluded.",
+  "limitations": "Previously inspected test months, not an untouched final test. Test dates are reduced by cleaning/history requirements; compare prior predictions only on identical dates. No donor workbook or donor-derived merged training table is used."
+}

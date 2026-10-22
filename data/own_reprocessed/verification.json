@@ -1,0 +1,8 @@
+{
+  "source_hashes_verified": true,
+  "fill_age_max_90_minutes": true,
+  "no_long_runs_partially_filled": true,
+  "observed_values_unchanged": true,
+  "calendar_lags_verified": true,
+  "retained_days_complete": true
+}
